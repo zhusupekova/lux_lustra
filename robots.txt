@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Запрет на технические файлы
+Disallow: /tmp/
+Disallow: /test/
+Disallow: /admin/
+Disallow: /private/
+
+# Файлы карты сайта
+Sitemap: https://luxlustra.online/sitemap.xml

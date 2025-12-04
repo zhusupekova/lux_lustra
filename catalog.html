@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог люстр Lux Lustra – хрустальные, классические, современные и дизайнерские люстры.">
+  <meta name="keywords" content="каталог люстр, купить люстру, люстры Бишкек, люстры Кыргызстан">
+  <title>Каталог люстр – Lux Lustra</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/lustra1.jpg" type="image/jpeg">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Lux Lustra</h1>
+      <p>Каталог люстр</p>
+      <nav aria-label="Главная навигация">
+        <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+        <ul class="nav-menu">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="index.html#about">О нас</a></li>
+          <li><a href="index.html#contact">Контакты</a></li>
+          <li><a href="order.html">Заказ</a></li>
+          <li><a href="catalog.html">Корзина (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+      <label for="search" class="visually-hidden">Поиск по сайту</label>
+      <input type="text" id="search" placeholder="Найти люстру..." aria-label="Поиск по каталогу">
+    </div>
+  </header>
+
+  <main>
+    <section id="catalog" class="container">
+      <h2>Каталог люстр</h2>
+      <div class="filters">
+        <label for="filter-style" class="visually-hidden">Фильтр по стилю</label>
+        <select id="filter-style">
+          <option value="">Все стили</option>
+          <option value="classic">Классика</option>
+          <option value="modern">Модерн</option>
+          <option value="crystal">Хрусталь</option>
+          <option value="ceiling">Потолочные</option>
+          <option value="designer">Дизайнерские</option>
+        </select>
+
+        <label for="filter-price" class="visually-hidden">Фильтр по цене</label>
+        <select id="filter-price">
+          <option value="">Все цены</option>
+          <option value="0-5000">До 5 000 сом</option>
+          <option value="5000-10000">5 000–10 000 сом</option>
+          <option value="10000+">Свыше 10 000 сом</option>
+        </select>
+      </div>
+
+      <div class="product-list" id="product-list">
+        <!-- Полный каталог рендерится через JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Lux Lustra. Все права защищены.</p>
+      <p>Телефон: <a href="tel:+996990440537">+996 990 440 537</a></p>
+      <p>
+        <a href="https://www.instagram.com/lux__lustra" target="_blank" rel="noopener noreferrer">Instagram</a> |
+        <a href="https://wa.me/996990440537" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Модальное окно -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-body">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Закрыть модальное окно" type="button">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

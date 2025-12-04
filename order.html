@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Оформление заказа люстры Lux Lustra и контакты магазина.">
+  <meta name="keywords" content="заказ люстр, контакты, Lux Lustra">
+  <title>Заказ и контакты – Lux Lustra</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/lustra1.jpg" type="image/jpeg">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Lux Lustra</h1>
+      <p>Оформление заказа</p>
+      <nav aria-label="Главная навигация">
+        <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+        <ul class="nav-menu">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="index.html#about">О нас</a></li>
+          <li><a href="#contact">Контакты</a></li>
+          <li><a href="order.html">Заказ</a></li>
+          <li><a href="catalog.html">Корзина (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+      <label for="search" class="visually-hidden">Поиск по сайту</label>
+      <input type="text" id="search" placeholder="Найти люстру..." aria-label="Поиск по сайту">
+    </div>
+  </header>
+
+  <main>
+    <section class="about container">
+      <h2>Как мы работаем</h2>
+      <p>Вы выбираете люстру в каталоге, оставляете заявку или пишете нам в мессенджер. Мы уточняем детали, помогаем с выбором и организуем доставку.</p>
+      <p>При необходимости можем подсказать по установке и уходу за люстрой.</p>
+    </section>
+
+    <section id="contact" class="order-form container">
+      <h2>Оформить заказ</h2>
+      <p>
+        📞 Телефон: <a href="tel:+996990440537"><strong>+996 990 440 537</strong></a><br>
+        📷 Instagram: <a href="https://www.instagram.com/lux__lustra" target="_blank" rel="noopener noreferrer">@lux__lustra</a><br>
+        📲 WhatsApp: <a href="https://wa.me/996990440537" target="_blank" rel="noopener noreferrer">Написать</a>
+      </p>
+      <form id="order-form" autocomplete="on">
+        <label for="order-name" class="visually-hidden">Имя</label>
+        <input type="text" id="order-name" name="name" placeholder="Ваше имя" required>
+        <label for="order-phone" class="visually-hidden">Телефон</label>
+        <input
+          type="tel"
+          id="order-phone"
+          name="phone"
+          placeholder="Номер телефона"
+          required
+          pattern="^\+?\d{9,15}$"
+          title="Введите корректный номер телефона">
+        <label for="order-comment" class="visually-hidden">Комментарий</label>
+        <textarea id="order-comment" name="comment" placeholder="Комментарий или название люстры"></textarea>
+        <button type="submit">Отправить заказ</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Lux Lustra. Все права защищены.</p>
+      <p>Телефон: <a href="tel:+996990440537">+996 990 440 537</a></p>
+      <p>
+        <a href="https://www.instagram.com/lux__lustra" target="_blank" rel="noopener noreferrer">Instagram</a> |
+        <a href="https://wa.me/996990440537" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Модальное окно -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-body">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Закрыть модальное окно" type="button">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
