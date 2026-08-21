@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="${product.img}" alt="${product.name}">
         <h3>${product.name}</h3>
         <p class="product-desc">${product.desc}</p>
-        <p class="product-price">${product.price.toLocaleString('ru-RU')} сом</p>
+        <p class="product-price">Подбор по запросу</p>
         <button type="button" class="btn-add-cart" data-add-to-cart="true">В корзину</button>
         <button type="button" class="btn-more" data-show-details="true">Подробнее</button>
       </article>
@@ -256,14 +256,14 @@ document.addEventListener('DOMContentLoaded', () => {
       updateCartCountDisplay();
       openModal(`
         <h3>Товар добавлен в корзину</h3>
-        <p>${product.name} — ${product.price.toLocaleString('ru-RU')} сом.</p>
+        <p>${product.name} — подбор по запросу.</p>
         <p>Мы свяжемся с вами для подтверждения заказа.</p>
       `);
     } else if (target.hasAttribute('data-show-details')) {
       openModal(`
         <h3>${product.name}</h3>
         <p>${product.desc}</p>
-        <p><strong>${product.price.toLocaleString('ru-RU')} сом</strong></p>
+        <p><strong>Подбор по запросу</strong></p>
         <p>Оставьте заявку через форму на странице или свяжитесь с нами в WhatsApp.</p>
       `);
     }
